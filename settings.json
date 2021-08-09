@@ -1,0 +1,8 @@
+{
+    "render-frames": true,
+    "render-box": true,
+    "render-text": true,
+    "render-percentage": true,
+    "text-color": "#000000",
+    "box-color": "#000000"
+}

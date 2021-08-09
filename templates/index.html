@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Conway's Game Of Life Launcher</title>
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- css -->
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				background-color: #f2f3d9;
+				color: #303036;
+				font-family: "Fira Sans", sans-serif;
+				display: grid;
+				place-items: center;
+			}
+
+			h1 {
+				margin: 50px;
+				text-align: center;
+			}
+
+			h2 {
+				text-align: center;
+			}
+
+			form {
+				border: 1px solid #303036;
+				background-color: #9cadce;
+				padding: 50px;
+				padding-bottom: 20px;
+				font-size: 25px;
+				border-radius: 50px;
+				width: 1000px;
+			}
+
+			label {
+				color: black;
+			}
+
+			.checkbox {
+				width: 25px;
+				height: 25px;
+				margin: 0;
+				margin-left: 10px;
+			}
+
+			#launch-btn {
+				font-size: 30px;
+				padding: 10px;
+				border-radius: 20px;
+				margin-top: 20px;
+			}
+
+			#launch-btn:hover {
+				background-color: #303036;
+				color: #f2f3d9;
+			}
+
+			.center {
+				text-align: center;
+			}
+
+			section {
+				margin-top: 40px;
+				border: 1px solid #303036;
+				background-color: #9cadce;
+				padding: 20px 100px;
+				border-radius: 50px;
+				width: 1000px;
+				text-align: left;
+			}
+
+			li {
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Racial Detection Launcher</h1>
+
+		<form id="form" method="POST" action="http://localhost:5000/start">
+			<label for="text-color">color of emotion text</label>
+			<input name="text-color" id="text-color" type="color" />
+			<br />
+			<label for="box-color">color of face border</label>
+			<input name="box-color" id="box-color" type="color" />
+			<br />
+			<label for="render-frames">render frames</label>
+			<input
+				class="checkbox"
+				name="render-frames"
+				id="render-frames"
+				type="checkbox"
+				checked
+			/>
+			<br />
+			<label for="render-box">render box around face</label>
+			<input
+				class="checkbox"
+				name="render-box"
+				id="render-box"
+				type="checkbox"
+				checked
+			/>
+			<br />
+			<label for="render-text">render emotion name on window</label>
+			<input
+				class="checkbox"
+				name="render-text"
+				id="render-text"
+				type="checkbox"
+				checked
+			/>
+			<br />
+			<label for="render-percentage"
+				>render emotion confidence percentage on window</label
+			>
+			<input
+				class="checkbox"
+				name="render-percentage"
+				id="render-percentage"
+				type="checkbox"
+				checked
+			/>
+			<br />
+			<div class="center">
+				<input id="launch-btn" type="submit" class="submit" value="Launch" />
+			</div>
+		</form>
+
+		<section>
+			<h2>controls</h2>
+			<ul>
+				<li>press q to quit</li>
+			</ul>
+		</section>
+	</body>
+</html>
